@@ -2,17 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'Home';
-
-const getData = document.querySelector('button')?.addEventListener('click', async function () {
-	await fetch('https://jsonplaceholder.typicode.com/todos/1')
-		.then((res) => res.json())
-		.then((data) => console.log(data))
-		.catch((err) => console.log(err));
-});
 ---
 
 <BaseLayout title={title}>
-	<h1>Astro v1.0</h1>
-	<button onclick='getData()'>Click</button>
+	<h1 class='text-xl'>Astro v1.0</h1>
 	<a href='/contact'>Contact</a>
 </BaseLayout>
